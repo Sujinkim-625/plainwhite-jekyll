@@ -1,0 +1,20 @@
+---
+layout: post
+published: true
+title: 깃허브 블로그 upload image
+date: "2023-08-14 13:03:36 +0530"
+categories: Github
+---
+
+1. upload github
+   
+2. copy parmalink
+   
+   ```
+   https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/fbcf0278ff309d129f34a836aa116ab3062bca46/assets/img/github0814branch.png
+   ```
+
+3. add  "?raw=true" 
+   ```
+   ![](parmalink?raw=true)
+   ```
