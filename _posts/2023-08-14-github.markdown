@@ -11,10 +11,10 @@ categories: Github
 
 2. GitHub Pages   
    Settings -> Pages -> Branch   
+![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/3bb5c41a4b460c86dbd8b6084341b2aa39c46384/assets/img/github0814fork.png?raw=true)
 
 
-
-3. Build Error   
+1. Build Error   
    github-pages 227 | Error: The plainwhite theme could not be found.   
    <img src="../assets/github0814error.png" >
 
