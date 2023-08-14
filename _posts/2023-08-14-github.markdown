@@ -7,16 +7,16 @@ categories: Github
 ---
 
 1. fork   
-   <img src="./../assets/img/github0814fork.png" >
+   <img src="../assets/img/github0814fork.png" >
 
 2. GitHub Pages   
    Settings -> Pages -> Branch   
-   <img src="./../assets/img/github0814branch.png" >
+   <img src="../assets/img/github0814branch.png" >
 
 
 3. Build Error   
    github-pages 227 | Error: The plainwhite theme could not be found.   
-   <img src="./../assets/img/github0814error.png" >
+   <img src="../assets/img/github0814error.png" >
 
    ```
    //_config.yml
