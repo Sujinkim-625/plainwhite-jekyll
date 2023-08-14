@@ -7,11 +7,12 @@ categories: Github
 ---
 
 1. fork   
-   ![](./../assets/fork.png)
+ <img src="assets/fork.png">
+ 
 
 2. GitHub Pages   
    Settings -> Pages -> Branch   
-   <img src="../assets/github0814branch.png" >
+   <img src="[../assets/github0814branch.png](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/d91ac4ab41acfc9c631023de3b8f339c5ec63934/assets/fork.png)" >
 
 
 3. Build Error   
