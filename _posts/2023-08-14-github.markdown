@@ -1,0 +1,23 @@
+---
+layout: post
+published: true
+title: 깃허브 블로그 fork
+date: "2023-08-14 11:03:36 +0530"
+categories: Github
+---
+
+1. fork
+   ![스크린샷 2023-08-14 오전 11 27 03](https://github.com/Sujinkim-625/newa_2023/assets/70993251/eab630ca-c81a-4fe2-a6bc-fdbf529e3036)
+2. GitHub Pages
+   Settings -> Pages -> Branch
+   ![스크린샷 2023-08-14 오전 11 29 44](https://github.com/Sujinkim-625/newa_2023/assets/70993251/8f03edd0-e37b-4b0e-8f1a-374979d3a4f4)
+
+3. Build Error
+   github-pages 227 | Error: The plainwhite theme could not be found.
+   ![스크린샷 2023-08-14 오전 11 32 36](https://github.com/Sujinkim-625/newa_2023/assets/70993251/7b728a2f-5f70-4d4d-9537-c12d1ae7d970)
+
+```
+//_config.yml
+//하단의 theme 주석 처리
+// theme : plain white
+```

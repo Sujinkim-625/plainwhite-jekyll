@@ -1,0 +1,29 @@
+---
+layout: post
+published: true
+title: "깃허브 원격 push error"
+date: 2023-08-10 22:03:36 +0530
+categories: Github
+---
+
+```bash
+git add .
+git commit -m "커밋 메세지"
+git push
+```
+
+ERROR
+
+```
+fatal: Unable to create '/Users/sujin/Documents/GitHub/Sujinkim-625.github.io/.git/index.lock': File exists.
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+```
+
+Solution
+
+```
+rm -f ./.git/index.lock
+```
