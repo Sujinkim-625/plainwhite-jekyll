@@ -7,7 +7,7 @@ categories: Github
 ---
 
 1. fork   
-   <img src="../assets/github0814fork.png" >
+   ![](./../assets/fork.png)
 
 2. GitHub Pages   
    Settings -> Pages -> Branch   
