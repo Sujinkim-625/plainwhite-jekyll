@@ -15,14 +15,15 @@ categories: Github
 
 
 3. Build    
-   
-   ERROR   
+   ```
+   ❌ ERROR:
    github-pages 227 | Error: The plainwhite theme could not be found.   
+   ```
    ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/c39cd7f394aea60b267857386614725bfb4d2c19/assets/img/github0814error.png?raw=true)
 
-   Solution
    ```
-   //_config.yml
-   //하단의 theme 주석 처리
+   ✅ Solution
+   // _config.yml
+   // 하단의 theme 주석 처리
    // theme : plain white
    ```
