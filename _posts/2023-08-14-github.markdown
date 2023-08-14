@@ -7,16 +7,16 @@ categories: Github
 ---
 
 1. fork   
-![github_0814_fork](https://github.com/Sujinkim-625/newa_2023/assets/70993251/f13a8edb-dc66-4ac8-8c29-37ed438c3378)
+   <img src="./../assets/img/github0814fork.png" >
 
 2. GitHub Pages   
    Settings -> Pages -> Branch   
-![github_0814_branch](https://github.com/Sujinkim-625/newa_2023/assets/70993251/d342466d-2d70-4489-9d8b-25c08faf1d10)
+   <img src="./../assets/img/github0814branch.png" >
 
 
 3. Build Error   
    github-pages 227 | Error: The plainwhite theme could not be found.   
-![github_0814_error](https://github.com/Sujinkim-625/newa_2023/assets/70993251/ca6cadb2-7a57-4250-9cf9-7de9ab64ae87)
+   <img src="./../assets/img/github0814error.png" >
 
    ```
    //_config.yml
