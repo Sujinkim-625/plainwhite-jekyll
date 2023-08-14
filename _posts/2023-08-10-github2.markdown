@@ -1,30 +1,24 @@
 ---
 layout: post
 published: true
-title: "깃허브 원격 push error"
-date: 2023-08-10 22:03:36 +0530
+title: 깃허브 블로그 fork
+date: '2023-08-10 22:03:36 +0530'
 categories: Github
 ---
+1. fork
+![스크린샷 2023-08-14 오전 11.27.03.png]({{site.baseurl}}/_posts/스크린샷 2023-08-14 오전 11.27.03.png)
 
-```bash
-git add .
-git commit -m "커밋 메세지"
-git push
-```
+2. GitHub Pages 
+Settings -> Pages -> Branch 
+![스크린샷 2023-08-14 오전 11.29.44.png]({{site.baseurl}}/_posts/스크린샷 2023-08-14 오전 11.29.44.png)
 
-ERROR
-
-```
-fatal: Unable to create '/Users/sujin/Documents/GitHub/Sujinkim-625.github.io/.git/index.lock': File exists.
-
-Another git process seems to be running in this repository, e.g.
-an editor opened by 'git commit'. Please make sure all processes
-are terminated then try again. If it still fails, a git process
-may have crashed in this repository earlier:
-```
-
-Solution
+3. Build Error
+github-pages 227 | Error: The plainwhite theme could not be found.
+![스크린샷 2023-08-14 오전 11.32.36.png]({{site.baseurl}}/_posts/스크린샷 2023-08-14 오전 11.32.36.png)
 
 ```
-rm -f ./.git/index.lock
+//_config.yml
+//하단의 theme 주석 처리
+// theme : plain white 
 ```
+
