@@ -7,17 +7,20 @@ categories: Github
 ---
 
 1. fork   
-  ![../assets/github0814branch.png](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/d91ac4ab41acfc9c631023de3b8f339c5ec63934/assets/fork.png?raw=true) 
+  ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/d91ac4ab41acfc9c631023de3b8f339c5ec63934/assets/fork.png?raw=true) 
 
 2. GitHub Pages   
    Settings -> Pages -> Branch   
-![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/3bb5c41a4b460c86dbd8b6084341b2aa39c46384/assets/img/github0814fork.png?raw=true)
+![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/c39cd7f394aea60b267857386614725bfb4d2c19/assets/img/github0814branch.png?raw=true)
 
 
-1. Build Error   
+3. Build    
+   
+   ERROR   
    github-pages 227 | Error: The plainwhite theme could not be found.   
-   <img src="../assets/github0814error.png" >
+   ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/c39cd7f394aea60b267857386614725bfb4d2c19/assets/img/github0814error.png?raw=true)
 
+   Solution
    ```
    //_config.yml
    //하단의 theme 주석 처리
