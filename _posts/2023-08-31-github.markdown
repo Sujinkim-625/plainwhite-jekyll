@@ -1,0 +1,24 @@
+---
+layout: post
+published: true
+title: youtube api 403 error
+date: "2023-08-31 13:03:36 +0530"
+categories: Github
+---
+
+❌ ERROR:   
+
+<b>Console log</b>
+**** 
+GET https://www.googleapis.com/youtube/v3/videos?key=[privatekey]&part=snippet&maxResults=25&chart=mostPopular 403                                       
+***
+<br>
+
+
+✅ Solution   
+할당량(Queries per day)의 현재 사용량 비율이 100%로 발생한 에러.   
+
+<i>youtube api의 하루 할당량은 10,000건</i>   
+<i>한국은 오후 4시 하루 할당량이 리셋됨</i>
+
+
