@@ -9,9 +9,11 @@ categories: Github
 ❌ ERROR:   
 
 <b>Console log</b>
-**** 
-GET https://www.googleapis.com/youtube/v3/videos?key=[privatekey]&part=snippet&maxResults=25&chart=mostPopular 403                                       
-***
+```
+GET https://www.googleapis.com/youtube/v3/  
+videos?key=[privatekey]&part=snippet&maxResults=25   
+&chart=mostPopular 403                                       
+```
 <br>
 
 
