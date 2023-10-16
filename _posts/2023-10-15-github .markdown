@@ -1,0 +1,166 @@
+---
+layout: post
+published: true
+title: How To Use Electron
+date: "2023-10-15 13:03:36 +0530"
+categories: Electron
+---
+
+1. install Electron   
+   Electron을 실행시키기 위해서는 Node.js와 npm이 필요하다.
+    ```cmd
+    // 설치 후 버전 확인.
+    node -v
+    nmp -w
+    ```
+
+    ```cmd
+    // electron을 global로 설치.
+    npm install electron -g
+    ```
+
+2. Electron project 생성
+    ```cmd
+    mkdir my-electron-app && cd my-electron-app
+    npm init -y
+    npm i --save-dev electron
+    ```
+
+    생성된 electron의 기본 구성
+    ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/58f0232d07c307e8229a5afa64413a8a69bd9cf7/assets/img/github1015.png?raw=true)
+
+    필수적인 기본 구성   
+    ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/1bb4757f37badb1c66f8a6fed98c84692629b04a/assets/img/github1015electron.png?raw=true)
+
+3. make new files   
+    main.js
+    ```javascript
+        const { app, BrowserWindow } = require("electron");
+        const path = require("path");
+
+        const createWindow = () => {
+        const win = new BrowserWindow({
+            width: 640,
+            height: 480,
+            webPreferences: { preload: path.join(__dirname, "preload.js") },
+        });
+
+        win.loadFile("index.html");
+        };
+
+        app.whenReady().then(() => {
+        createWindow();
+
+        app.on("activate", () => {
+            if (BrowserWindow.getAllWindows().length === 0) createWindow();
+        });
+        });
+
+        app.on("window-all-closed", () => {
+        if (process.platform !== "darwin") app.quit();
+        });
+    ```
+
+    index.html
+    ```javascript
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Hello World!</title>
+            <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+        </head>
+        <body style="background: white;">
+            <h1>Hello World!</h1>
+            <p>
+                We are using Node.js <span id="node-version"></span>,
+                Chromium <span id="chrome-version"></span>,
+                and Electron <span id="electron-version"></span>.
+            </p>
+        </body>
+        </html>
+    ```
+
+    preload.js
+    ```javascript
+        window.addEventListener('DOMContentLoaded', () => {
+        const replaceText = (selector, text) => {
+            const element = document.getElementById(selector)
+            if (element) element.innerText = text
+        }
+
+        for (const type of ['chrome', 'node', 'electron']) {
+            replaceText(`${type}-version`, process.versions[type])
+        }
+        })
+    ```
+
+    package.json 
+    ```json
+        {
+            "name": "my-electron-app",
+            "version": "0.1.0",
+            "author": "your name",
+            "description": "My Electron app",
+            "main": "main.js",
+            "scripts": {
+                "start": "electron ."
+            }
+        }
+    ```
+
+4. build 
+    ```cmd
+    npm start
+    ```
+
+5. electron을 통해 실행파일 만들기
+    ```cmd
+    npm install --save-dev electron-builder
+    ```    
+
+    package.json(mac)
+    ```json
+        {
+        "name": "newa-electron",
+        "version": "1.0.0",
+        "description": "",
+        "main": "main.js",
+        "scripts": {
+            "start": "electron .",
+            "deploy": "electron-builder --mac dmg"
+        },
+        "author": "",
+        "license": "ISC",
+        "devDependencies": {
+            "electron": "^25.4.0",
+            "electron-builder": "^24.6.3"
+        },
+        "build": {
+            "productName": "newa",
+            "appId": "com.electron.hello",
+            "asar": true,
+            "protocols": {
+            "name": "newa",
+            "schemes": [
+                "newa"
+            ]
+            },
+            "mac": {
+            "target": [
+                "dmg"
+            ],
+            "icon": "./resources/installer/Icon.ico"
+            },
+            "directories": {
+            "buildResources": "./resources/installer/",
+            "output": "./exeResult/",
+            "app": "."
+            }
+        }
+        }
+    ```
+    ```cmd
+        npm run deploy
+    ```
+    exeResult 파일 안의 dmg를 설치!
