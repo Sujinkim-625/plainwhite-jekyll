@@ -1,0 +1,31 @@
+---
+layout: post
+published: true
+title: 깃허브 push error
+date: "2023-10-16 07:03:36 +0530"
+categories: Github
+---
+
+```
+git add .
+git commit -m "커밋 메세지"
+git push
+```
+
+ERROR
+
+```
+To https://github.com/Sujinkim-625/Sujinkim-625.github.io.git
+ ! [rejected] master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Sujinkim-625/Sujinkim-625.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+Solution
+
+```
+git push -u origin +master
+```

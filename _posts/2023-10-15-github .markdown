@@ -8,31 +8,33 @@ categories: Electron
 
 1. install Electron   
    Electron을 실행시키기 위해서는 Node.js와 npm이 필요하다.
-    ```cmd
+    ```
     // 설치 후 버전 확인.
     node -v
     nmp -w
-    ```
 
-    ```cmd
     // electron을 global로 설치.
     npm install electron -g
-    ```
+    ```   
+<br/>
 
 2. Electron project 생성
-    ```cmd
+    ```
     mkdir my-electron-app && cd my-electron-app
     npm init -y
     npm i --save-dev electron
     ```
 
-    생성된 electron의 기본 구성
+    생성된 electron의 기본 구성   
+
     ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/58f0232d07c307e8229a5afa64413a8a69bd9cf7/assets/img/github1015.png?raw=true)
 
     필수적인 기본 구성   
     ![](https://github.com/Sujinkim-625/Sujinkim-625.github.io/blob/1bb4757f37badb1c66f8a6fed98c84692629b04a/assets/img/github1015electron.png?raw=true)
 
-3. make new files   
+<br/>
+
+3. make new files    
     main.js
     ```javascript
         const { app, BrowserWindow } = require("electron");
@@ -109,13 +111,17 @@ categories: Electron
         }
     ```
 
+<br/>
+
 4. build 
-    ```cmd
+    ```
     npm start
     ```
 
+<br/>
+
 5. electron을 통해 실행파일 만들기
-    ```cmd
+    ```
     npm install --save-dev electron-builder
     ```    
 
@@ -160,7 +166,12 @@ categories: Electron
         }
         }
     ```
-    ```cmd
-        npm run deploy
+<br/>
+
+6. npm 실행
     ```
-    exeResult 파일 안의 dmg를 설치!
+        npm run deploy
+    ```   
+<br/>
+
+7. exeResult 파일 안의 dmg를 설치!
